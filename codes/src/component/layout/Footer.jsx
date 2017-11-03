@@ -6,8 +6,6 @@
 import { Layout } from 'antd';
 import React from 'react';
 
-import './index.less';
-
 const { Footer } = Layout;
 
 /**
@@ -17,7 +15,7 @@ const { Footer } = Layout;
 class CustomFooter extends React.PureComponent {
   render() {
     return (
-      <Footer className="ant-layout-footer">
+      <Footer>
         Copyright © 2017 <a href="https://github.com/dunwu/" target="_blank">Zhang Peng</a><br />
       </Footer>
     );

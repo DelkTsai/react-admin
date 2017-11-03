@@ -154,15 +154,17 @@ class BasicTable extends React.PureComponent {
     }];
     return (
       <div>
-        <Table
-          rowKey="loginName"
-          rowSelection={rowSelection}
-          columns={columns}
-          dataSource={table.list}
-          loading={table.loading}
-          onChange={this.onChange}
-          expandedRowRender={this.onExpand}
-        />
+        <Card title="基本表格示例">
+          <Table
+            rowKey="loginName"
+            rowSelection={rowSelection}
+            columns={columns}
+            dataSource={table.list}
+            loading={table.loading}
+            onChange={this.onChange}
+            expandedRowRender={this.onExpand}
+          />
+        </Card>
       </div>
     );
   }

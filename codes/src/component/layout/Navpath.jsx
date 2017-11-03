@@ -5,13 +5,11 @@
  * @see https://ant.design/components/breadcrumb-cn/
  * @see https://ant.design/components/icon-cn/
  */
-import { Breadcrumb, Icon } from 'antd';
-import _ from 'lodash';
+import { Breadcrumb, Col, Icon, Row } from 'antd';
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import getPathsAndKeyPath from '../util';
-import './Navpath.less';
+import getPathsAndKeyPath from './common';
 
 /**
  * 面包屑组件
@@ -25,7 +23,7 @@ class Navpath extends React.PureComponent {
     const keyPath = [];
     getPathsAndKeyPath(router, menu, paths, keyPath);
 
-    const breadcrumbItems = _.reverse(paths).map((item) => {
+    const breadcrumbItems = paths.map((item) => {
       return (
         <Breadcrumb.Item key={item.key}>
           <Icon type={item.icon} />
@@ -34,10 +32,23 @@ class Navpath extends React.PureComponent {
       );
     });
 
+    let tilte;
+    if (paths && paths.length > 0) {
+      tilte = paths[paths.length - 1].title;
+    }
     return (
-      <Breadcrumb>
-        {breadcrumbItems}
-      </Breadcrumb>
+      <div className="navpath">
+        <Row>
+          <Col xs={0} sm={12} md={12} lg={12} xl={12}>
+            <span className="title">{tilte}</span>
+          </Col>
+          <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+            <Breadcrumb separator=">">
+              {breadcrumbItems}
+            </Breadcrumb>
+          </Col>
+        </Row>
+      </div>
     );
   }
 }

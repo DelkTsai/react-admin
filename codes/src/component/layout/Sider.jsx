@@ -5,10 +5,8 @@
  */
 import { Layout } from 'antd';
 import React from 'react';
-import Logo from '../logo/Logo';
-import Menu from '../menu/Menu';
-
-import './Sider.less';
+import Menu from './Menu';
+import Logo from './Logo';
 
 const { Sider } = Layout;
 
@@ -25,7 +23,6 @@ class CustomSider extends React.PureComponent {
        * 若将 collapsedWidth 设置为零，会出现特殊 trigger。
        */
       <Sider
-        className="ant-layout-sider"
         breakpoint="lg"
         collapsedWidth="0"
       >

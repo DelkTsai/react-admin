@@ -8,8 +8,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import getPathsAndKeyPath from '../util';
-import './Menu.less';
+import getPathsAndKeyPath from './common';
 import { onMenuItemSelected, onMenuListSearch } from './redux/actions';
 
 /**
@@ -43,7 +42,6 @@ class CustomMenu extends React.PureComponent {
         case 'SubMenu':
           return (
             <Menu.SubMenu
-              className="ant-menu-sub-menu"
               key={item.key}
               title={<span><Icon type={item.icon} /><span className="nav-text">{item.title}</span></span>}
             >
@@ -53,7 +51,6 @@ class CustomMenu extends React.PureComponent {
         case 'ItemGroup':
           return (
             <Menu.ItemGroup
-              className="ant-menu-item-group"
               key={item.key}
               title={
                 <span>
@@ -72,7 +69,7 @@ class CustomMenu extends React.PureComponent {
         case 'Item':
         default:
           return (
-            <Menu.Item className="ant-menu-item" key={item.key}>
+            <Menu.Item key={item.key}>
               {
                 item.url ? (
                   <Link to={item.url}>
@@ -93,7 +90,7 @@ class CustomMenu extends React.PureComponent {
     return (
       <Spin spinning={menu.loading} delay={500} size="large" tip="Loading...">
         <Menu
-          className="ant-menu"
+          className="sider-menu"
           mode={this.state.mode}
           theme="dark"
           selectedKeys={keyPath}

@@ -40,8 +40,9 @@ function getPathsAndKeyPath(router, menu, paths, keyPath) {
       paths.push(items[0]);
       keyPath.push(items[0].key);
       getPaths(menu.list, items[0].parent, paths, keyPath);
-      keyPath = _.reverse(keyPath);
     }
+    paths = _.reverse(paths);
+    keyPath = _.reverse(keyPath);
   }
 }
 

@@ -4,20 +4,34 @@
  * @see https://ant.design/components/layout-cn/
  */
 import { Layout } from 'antd';
+import PropTypes from 'prop-types';
 import React from 'react';
-import Content from './content/Content';
-import Footer from './footer/Footer';
-import Header from './header/Header';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import Content from './Content';
+import Footer from './Footer';
+import Header from './Header';
 import './Layout.less';
-import Sider from './sider/Sider';
+import Navpath from './Navpath';
+import Sider from './Sider';
 
 class CustomLayout extends React.PureComponent {
+  static propTypes = {
+    navpath: PropTypes.array
+  };
+  static defaultProps = {
+    navpath: []
+  };
+
   render() {
+    const { navpath } = this.props;
+
     return (
       <Layout className="ant-layout-has-sider">
         <Sider />
-        <Layout>
+        <Layout className="ant-layout-container">
           <Header />
+          <Navpath data={navpath} />
           <Content type="SHCF">
             {this.props.children}
           </Content>
@@ -27,4 +41,14 @@ class CustomLayout extends React.PureComponent {
     );
   }
 }
-export default CustomLayout;
+const mapStateToProps = (state) => {
+  const { menu } = state;
+  return {
+    navpath: menu.navpath
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {};
+};
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CustomLayout));
