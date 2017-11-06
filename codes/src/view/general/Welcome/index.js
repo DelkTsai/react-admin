@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './WelcomeView.less';
+import './index.less';
 
 class WelcomeView extends React.PureComponent {
   render() {

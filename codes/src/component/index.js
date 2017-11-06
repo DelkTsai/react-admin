@@ -1,2 +1,2 @@
 export RootContainer from './RootContainer';
-export SHCFLayout from './layout/Layout';
+export Layout from './Layout';

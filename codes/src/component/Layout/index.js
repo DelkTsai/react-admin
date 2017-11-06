@@ -11,7 +11,7 @@ import { withRouter } from 'react-router-dom';
 import Content from './Content';
 import Footer from './Footer';
 import Header from './Header';
-import './Layout.less';
+import './index.less';
 import Navpath from './Navpath';
 import Sider from './Sider';
 

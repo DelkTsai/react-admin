@@ -1,4 +1,4 @@
-import WelcomeView from './welcome/WelcomeView';
+import WelcomeView from './Welcome';
 
 export default [{
   path: '/home',

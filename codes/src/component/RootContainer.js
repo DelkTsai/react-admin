@@ -15,7 +15,7 @@ const store = configStore();
 // 返回包裹了路由的 HCFLayout
 class WrappedContainer extends React.PureComponent {
   render() {
-    const Layout = require('./layout/Layout').default;
+    const Layout = require('./Layout').default;
     return (
       <Layout>
         <Switch>
