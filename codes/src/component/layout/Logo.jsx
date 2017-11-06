@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from './favicon.ico';
 
 class Logo extends React.PureComponent {
   render() {
     return (
       <div>
         <Link className="sider-logo" to="/home">
-          <img alt="antd.svg" src={logoImg} />
+          <img
+            alt="antd.svg"
+            src="http://oyz7npk35.bkt.clouddn.com/image/react-admin/react-admin-logo.ico"
+          />
           <span>REACT ADMIN</span>
         </Link>
       </div>

@@ -8,10 +8,11 @@
 import _ from 'lodash';
 import errorRoutes from '../view/error/route';
 import generalRoutes from '../view/general/route';
+import formRoutes from '../view/form/route';
 import uiRoutes from '../view/ui/route';
 
 /**
  * 合并所有子路由
  */
-const rootRouter = _.concat(generalRoutes, uiRoutes, errorRoutes);
+const rootRouter = _.concat(errorRoutes, generalRoutes, formRoutes, uiRoutes);
 export default rootRouter;

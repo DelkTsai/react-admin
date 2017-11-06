@@ -16,6 +16,14 @@ module.exports = {
     url: '/home',
     children: []
   }, {
+    key: 'form',
+    title: '表单',
+    icon: 'edit',
+    type: 'SubMenu',
+    children: [
+      { key: '/form/basic', title: '基础表单', type: 'Item', url: '/form/basic', parent: 'form' }
+    ]
+  }, {
     key: 'ui',
     title: '组件',
     icon: 'scan',
@@ -50,7 +58,7 @@ module.exports = {
   }, {
     key: 'error',
     title: '错误',
-    icon: 'close-circle-o',
+    icon: 'exception',
     type: 'SubMenu',
     children: [
       { key: '/error/403', title: '403', type: 'Item', url: '/error/403', parent: 'error' },
