@@ -65,5 +65,14 @@ module.exports = {
       { key: '/error/404', title: '404', type: 'Item', url: '/error/404', parent: 'error' },
       { key: '/error/500', title: '500', type: 'Item', url: '/error/500', parent: 'error' }
     ]
+  }, {
+    key: 'general',
+    title: '特殊页面',
+    icon: 'laptop',
+    type: 'SubMenu',
+    children: [
+      { key: '/general/result', title: '结果', type: 'Item', url: '/general/result', parent: 'general' },
+      { key: '/general/welcome', title: '欢迎', type: 'Item', url: '/general/welcome', parent: 'general' }
+    ]
   }]
 };
