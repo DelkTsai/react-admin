@@ -47,5 +47,15 @@ module.exports = {
         { key: '/ui/feedback/modal', title: '对话框', type: 'Item', url: '/ui/feedback/modal', parent: '/ui/feedback' }
       ]
     }]
+  }, {
+    key: 'error',
+    title: '错误',
+    icon: 'close-circle-o',
+    type: 'SubMenu',
+    children: [
+      { key: '/error/403', title: '403', type: 'Item', url: '/error/403', parent: 'error' },
+      { key: '/error/404', title: '404', type: 'Item', url: '/error/404', parent: 'error' },
+      { key: '/error/500', title: '500', type: 'Item', url: '/error/500', parent: 'error' }
+    ]
   }]
 };

@@ -6,11 +6,12 @@
  * @see https://reacttraining.cn/
  */
 import _ from 'lodash';
+import errorRoutes from '../view/error/route';
 import generalRoutes from '../view/general/route';
 import uiRoutes from '../view/ui/route';
 
 /**
  * 合并所有子路由
  */
-const rootRouter = _.concat(generalRoutes, uiRoutes);
+const rootRouter = _.concat(generalRoutes, uiRoutes, errorRoutes);
 export default rootRouter;

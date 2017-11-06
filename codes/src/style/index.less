@@ -10,6 +10,12 @@
 @import "img.less";
 @import "scroll.less";
 
-#root, div[data-reactroot] {
+html, body, :global(#root) {
   height: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

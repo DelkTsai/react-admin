@@ -1,4 +1,3 @@
-import NotFoundView from './Error/404';
 import WelcomeView from './welcome/WelcomeView';
 
 export default [{
@@ -7,7 +6,4 @@ export default [{
 }, {
   path: '/welcome',
   component: WelcomeView
-}, {
-  path: '/404',
-  component: NotFoundView
 }];
