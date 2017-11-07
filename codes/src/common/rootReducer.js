@@ -7,16 +7,19 @@
 import { routerReducer as router } from 'react-router-redux';
 import { combineReducers } from 'redux';
 import menu from '../component/Layout/redux/reducers';
-import table from '../view/UI/Table/redux/reducers';
+import stepform from '../view/form/StepForm/redux/reducers';
+import table from '../view/ui/Table/redux/reducers';
 
 const reducerMap = {
   router,
   menu,
-  table
+  table,
+  stepform
 };
 
 // combineReducers 的用法可以参考以下链接的内容
 // @see http://cn.redux.js.org/docs/recipes/reducers/UsingCombineReducers.html
 // @see http://cn.redux.js.org/docs/recipes/reducers/BeyondCombineReducers.html
 // @see http://cn.redux.js.org/docs/api/combineReducers.html
-export default combineReducers(reducerMap);
+const rootReducer = combineReducers(reducerMap);
+export default rootReducer;

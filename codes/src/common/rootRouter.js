@@ -6,10 +6,10 @@
  * @see https://reacttraining.cn/
  */
 import _ from 'lodash';
-import errorRoutes from '../view/Error/route';
-import formRoutes from '../view/Form/route';
+import errorRoutes from '../view/error/route';
+import formRoutes from '../view/form/route';
 import generalRoutes from '../view/general/route';
-import uiRoutes from '../view/UI/route';
+import uiRoutes from '../view/ui/route';
 
 /**
  * 合并所有子路由

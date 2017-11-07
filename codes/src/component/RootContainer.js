@@ -7,10 +7,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
-import { configStore, history, rootRouter } from '../common';
-
-// 创建 Redux Store，这是本应用唯一的状态管理容器
-const store = configStore();
+import { store, history, rootRouter } from '../common';
 
 // 返回包裹了路由的 HCFLayout
 class WrappedContainer extends React.PureComponent {

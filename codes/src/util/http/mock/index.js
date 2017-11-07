@@ -7,5 +7,6 @@ const mockAxios = axios.create();
 const mockAdapter = new MockAdapter(mockAxios);
 mockAdapter.onGet('/menu/list').reply(200, require('./menu'));
 mockAdapter.onGet('/ui/table/basic/list').reply(200, require('./ui/table/basic'));
+mockAdapter.onPost('/api/form/save').reply(200, require('./form'));
 
 export default mockAxios;

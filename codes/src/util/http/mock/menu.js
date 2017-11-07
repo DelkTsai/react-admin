@@ -21,7 +21,8 @@ module.exports = {
     icon: 'edit',
     type: 'SubMenu',
     children: [
-      { key: '/form/basic', title: '基础表单', type: 'Item', url: '/form/basic', parent: 'form' }
+      { key: '/form/basic', title: '基础表单', type: 'Item', url: '/form/basic', parent: 'form' },
+      { key: '/form/step', title: '分步表单', type: 'Item', url: '/form/step', parent: 'form' }
     ]
   }, {
     key: 'ui',

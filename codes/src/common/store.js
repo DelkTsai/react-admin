@@ -35,7 +35,8 @@ if (process.env.NODE_ENV === 'development') {
   enhancer = applyMiddleware(...middlewares);
 }
 
-export default function configStore(initialState) {
+// 创建 Redux Store，这是本应用唯一的状态管理容器
+const configStore = (initialState) => {
   // Note: only Redux >= 3.1.0 supports passing enhancer as third argument.
   // See https://github.com/reactjs/redux/releases/tag/v3.1.0
   const store = createStore(rootReducer, initialState, enhancer);
@@ -48,4 +49,6 @@ export default function configStore(initialState) {
   }
 
   return store;
-}
+};
+const store = configStore();
+export default store;

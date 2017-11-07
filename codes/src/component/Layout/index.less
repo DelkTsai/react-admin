@@ -1,3 +1,5 @@
+@import "../../style/default.less";
+
 .ant-layout-has-sider {
   height: 100%;
   width: 100%;
@@ -5,7 +7,7 @@
 }
 
 .ant-layout-container {
-  background-color: #ecf0f5;
+  background-color: @layout-content-backgroud-gray;
 }
 
 // 侧边栏
@@ -21,7 +23,7 @@
   z-index: 50;
   width: 100%;
   position: fixed;
-  background: #a34950;
+  background-color: @layout-header-background;
 }
 
 // 内容栏
@@ -34,14 +36,14 @@
   line-height: 32px;
   text-align: center;
   font-size: 12px;
-  color: #999999;
-  background: #ffffff;
+  color: grey;
+  background: white;
 }
 
 // 侧边栏 Logo
 div .sider-logo {
-  color: #ffffff;
-  background-color: #a34950;
+  color: white;
+  background-color: @layout-header-background;
   line-height: 64px;
   display: flex;
   justify-content: center;
@@ -69,7 +71,7 @@ div .sider-logo {
 
   .title {
     line-height: 50px;
-    font-size: 24px;
+    font-size: @navpath-primary-font-size;
     font-weight: 600;
     text-align: left;
     padding-left: 36px;
@@ -82,24 +84,25 @@ div .sider-logo {
     padding-right: 36px;
 
     span {
-      color: #586f76;
-      font-size: 12px;
+      font-size: @navpath-secondary-font-size;
     }
   }
 }
 
 // 侧边栏菜单
 .sider-menu {
-  font-size: 16px;
-
   .ant-menu-sub.ant-menu-inline .ant-menu-item-group-title {
     padding-left: 20px;
-    font-size: 16px;
+    font-size: @menu-font-size;
     font-style: italic;
   }
 
+  .ant-menu-submenu-title {
+    font-size: @menu-font-size;
+  }
+
   .ant-menu-item {
-    font-size: 16px;
+    font-size: @menu-font-size;
   }
 }
 
