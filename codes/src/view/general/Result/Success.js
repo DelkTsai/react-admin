@@ -1,6 +1,6 @@
 import { Button, Col, Icon, Row, Steps } from 'antd';
 import React from 'react';
-import Result from '../../../component/Result';
+import { Result } from '../../../component';
 
 const { Step } = Steps;
 

@@ -8,8 +8,8 @@ import './style.less';
 
 export default class Step2 extends React.PureComponent {
   componentWillMount() {
-    const { stepform } = this.props;
-    if (_.isEmpty(stepform.firstData)) {
+    const { formview } = this.props;
+    if (_.isEmpty(formview.step.firstData)) {
       this.onPrev();
     }
   }
@@ -23,14 +23,14 @@ export default class Step2 extends React.PureComponent {
   };
 
   render() {
-    const { formItemLayout, form, stepform } = this.props;
+    const { formItemLayout, form, formview } = this.props;
     const { getFieldDecorator } = form;
     const onValidateForm = (e) => {
       e.preventDefault();
       form.validateFields((err, values) => {
         if (!err) {
           this.props.onStepFormSecond(values);
-          const submitData = _.merge(stepform.firstData, stepform.secondData);
+          const submitData = _.merge(formview.step.firstData, formview.step.secondData);
           this.props.onStepFormSubmit(submitData);
           this.onNext();
         }
@@ -49,29 +49,29 @@ export default class Step2 extends React.PureComponent {
           className="stepFormText"
           label="付款账户"
         >
-          {stepform.firstData.payAccount}
+          {formview.step.firstData.payAccount}
         </Form.Item>
         <Form.Item
           {...formItemLayout}
           className="stepFormText"
           label="收款账户"
         >
-          {stepform.firstData.receiverAccount}
+          {formview.step.firstData.receiverAccount}
         </Form.Item>
         <Form.Item
           {...formItemLayout}
           className="stepFormText"
           label="收款人姓名"
         >
-          {stepform.firstData.receiverName}
+          {formview.step.firstData.receiverName}
         </Form.Item>
         <Form.Item
           {...formItemLayout}
           className="stepFormText"
           label="转账金额"
         >
-          <span className="money">{stepform.firstData.amount}</span>
-          <span className="uppercase">（{number.digitUppercase(stepform.firstData.amount)}）</span>
+          <span className="money">{formview.step.firstData.amount}</span>
+          <span className="uppercase">（{number.digitUppercase(formview.step.firstData.amount)}）</span>
         </Form.Item>
         <hr />
         <br />

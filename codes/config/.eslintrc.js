@@ -51,6 +51,7 @@ module.exports = {
     'jsx-a11y/href-no-hash': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off', // 不应该为非交互式元素分配鼠标或键盘事件监听器
     'jsx-a11y/label-has-for': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
 
     /* 导入规则的 ESLint 检查规则 */
     /* @see https://github.com/benmosher/eslint-plugin-import */

@@ -3,7 +3,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import { onStepFormFirst, onStepFormSecond, onStepFormSubmit } from './redux/actions';
+import { onStepFormFirst, onStepFormSecond, onStepFormSubmit } from '../redux/actions';
+import { stepSelector } from '../redux/selectors';
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
@@ -38,7 +39,7 @@ class StepForm extends React.PureComponent {
   }
 
   render() {
-    const { form, stepform } = this.props;
+    const { form, formview } = this.props;
     const formItemLayout = {
       labelCol: {
         span: 5
@@ -60,7 +61,7 @@ class StepForm extends React.PureComponent {
             {...this.props}
             formItemLayout={formItemLayout}
             form={form}
-            data={stepform}
+            data={formview.step}
           />
         </div>
       </Card>
@@ -69,7 +70,9 @@ class StepForm extends React.PureComponent {
 }
 function mapStateToProps(state) {
   return {
-    stepform: state.stepform
+    formview: {
+      step: stepSelector(state)
+    }
   };
 }
 function mapDispatchToProps(dispatch) {

@@ -22,6 +22,7 @@ module.exports = {
     type: 'SubMenu',
     children: [
       { key: '/form/basic', title: '基础表单', type: 'Item', url: '/form/basic', parent: 'form' },
+      { key: '/form/advanced', title: '高级表单', type: 'Item', url: '/form/advanced', parent: 'form' },
       { key: '/form/step', title: '分步表单', type: 'Item', url: '/form/step', parent: 'form' }
     ]
   }, {
