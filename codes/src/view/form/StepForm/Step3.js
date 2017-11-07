@@ -15,7 +15,7 @@ export default class Step3 extends React.PureComponent {
   }
 
   onFinish = () => {
-    store.dispatch(push('/form/step/first'));
+    store.dispatch(push('/form/step'));
   };
 
   render() {

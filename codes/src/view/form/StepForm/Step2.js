@@ -15,7 +15,7 @@ export default class Step2 extends React.PureComponent {
   }
 
   onPrev = () => {
-    store.dispatch(push('/form/step/first'));
+    store.dispatch(push('/form/step'));
   };
 
   onNext = () => {

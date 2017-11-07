@@ -17,7 +17,7 @@ class StepForm extends React.PureComponent {
     const { pathname } = location;
     const pathList = pathname.split('/');
     switch (pathList[pathList.length - 1]) {
-    case 'first':
+    case 'step':
       return 0;
     case 'second':
       return 1;
